@@ -547,8 +547,11 @@ Tareas:
 3. Subir la imagen del contenedor creado a Docker Hub. La imagen debe llamarse `apacheserver_p1`.
 4. Subir el enlace de la imagen creada a la tarea del CV.
 
+
 Comandos usados:
+
 según: https://hub.docker.com/r/ubuntu/apache2 apache está en el puerto 8080.
+
 sudo docker run -d --name apache2-container -e TZ=UTC -p 8080:80 ubuntu/apache2:2.4-22.04_beta.
 
 
