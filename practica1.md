@@ -50,7 +50,7 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 creo un archivo index.htm: touch index.html
 
-dentro escribo: <h1> Hola Maria Woodruff Vazquez </h1>
+dentro escribo: "<h1> Hola Maria Woodruff Vazquez! </h1>"
 
 creo la imagen:
 
@@ -61,7 +61,7 @@ docker run -d -p 8082:80 --name apacheserver_p1 apacheserver_p1
 pruebo: http://localhost:8082
 
 
-# Lo subo a Docker Hub
+## Lo subo a Docker Hub
 
 compruebo que he iniciado sesión: sudo docker login
 
