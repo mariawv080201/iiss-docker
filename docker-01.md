@@ -561,7 +561,7 @@ Steps:
 
 
 ## Comandos usados:
-# Creo el docker
+### Creo el docker
 creo una carpeta llamada docker en el escritorio
 creo un archivo Dockerfile: touch Dockerfile
 escribo dentro con: vim Dockerfile
@@ -575,7 +575,7 @@ construyo el docker: docker build -t mi_apache .
 lo ejecuto: docker run -p 80:80 mi_apache
 compruebo que funciona en: http://localhost
 
-# Modifico el puerto: 
+### Modifico el puerto: 
 detengo el docker: docker stop nombre_del_contenedor
 edito el archivo Dockerfile:
 FROM ubuntu:latest
