@@ -50,7 +50,7 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 creo un archivo index.htm: touch index.html
 
-dentro escribo: "<h1> Hola Maria Woodruff Vazquez! </h1>"
+dentro escribo: "< h 1 > Hola Maria Woodruff Vazquez! < / h 1 >"
 
 creo la imagen:
 
