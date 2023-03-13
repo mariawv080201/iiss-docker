@@ -19,8 +19,16 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y apache2
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
-construyo el docker: docker build -t mi_apache .
-lo ejecuto: docker run -p 80:80 mi_apache
+```
+
+construyo el docker:
+```console
+docker build -t mi_apache
+```
+
+```console
+lo ejecuto:
+docker run -p 80:80 mi_apache
 ```
 
 compruebo que funciona en: http://localhost
