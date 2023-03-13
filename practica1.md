@@ -1,5 +1,8 @@
 ## Comandos usados
 
+Tengo que buscar el index.html y meterle mi hola
+lo del puerto que es RUN sed -i 's/Listen 80/Listen 8082/' /etc/apache2/ports.conf hacerlo yo a mano
+
 ### Creo el docker
 
 creo una carpeta llamada docker en el escritorio
