@@ -80,7 +80,7 @@ pruebo: http://localhost:8082
 compruebo que he iniciado sesión:
 ```console
 sudo docker login
-
+```
 
 ```console
 sudo docker apacheserver_p1 mariawv0802/apacheserver_p1:latest
