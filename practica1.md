@@ -28,7 +28,10 @@ compruebo que funciona en: http://localhost
 
 ### Modifico el puerto: 
 
-detengo el docker: docker stop nombre_del_contenedor
+detengo el docker:
+```console
+docker stop nombre_del_contenedor
+```
 
 edito el archivo Dockerfile:
 
@@ -44,9 +47,15 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 ## Añado un mensaje:
 
-creo un archivo index.htm: touch index.html
+creo un archivo index.htm:
+```console
+touch index.html
+```
 
-dentro escribo sin espacios (para que no salte la etiqueta aquí): "< h 1 > Hola Maria Woodruff Vazquez! < / h 1 >"
+dentro escribo sin espacios:
+```html
+<h1> Hola Maria Woodruff Vazquez! </h1>
+```
 
 creo la imagen:
 
