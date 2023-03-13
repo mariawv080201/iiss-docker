@@ -12,7 +12,7 @@ touch Dockerfile
 escribo dentro con:
 ```console
 vim Dockerfile
-
+```
 
 ```console
 FROM ubuntu:latest
