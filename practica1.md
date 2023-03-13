@@ -4,9 +4,15 @@
 
 creo una carpeta llamada docker en el escritorio
 
-creo un archivo Dockerfile: touch Dockerfile
+creo un archivo Dockerfile:
+```console
+touch Dockerfile
+```
 
-escribo dentro con: vim Dockerfile
+escribo dentro con:
+```console
+vim Dockerfile
+
 
 ```console
 FROM ubuntu:latest
