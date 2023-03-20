@@ -136,3 +136,11 @@ sudo docker push mariawv0802/apacheserver_p1:latest
 
 https://hub.docker.com/repository/docker/mariawv0802/apacheserver_p1/general
 
+
+
+# Comandos usados
+
+Edito mi imagen
+```console
+sudo docker run -t -i mariawv0802/apacheserver_p1 /bin/bash
+
