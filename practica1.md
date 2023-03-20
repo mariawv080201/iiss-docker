@@ -18,6 +18,21 @@ vim ports.conf
 
 Cambio Listen 80 por 8082.
 
+// añadir imagen
+
+Busco el archivo donde modificar el html:
+
+```console
+vim /var/www/html/index.html
+``
+
+Dentro escribo:
+```html
+<h1> Hola Maria Woodruff Vazquez! </h1>
+```
+
+// añadir imagen
+
 ### Creo el docker
 
 creo una carpeta llamada docker en el escritorio
