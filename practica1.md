@@ -143,4 +143,11 @@ https://hub.docker.com/repository/docker/mariawv0802/apacheserver_p1/general
 Edito mi imagen
 ```console
 sudo docker run -t -i mariawv0802/apacheserver_p1 /bin/bash
+```
+
+Instalo vim para poder editar los ficheros:
+```console
+apt-get update
+apt-get install vim
+``
 
