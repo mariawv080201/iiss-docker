@@ -33,6 +33,17 @@ Dentro escribo:
 
 // añadir imagen
 
+Reinicio el servidor:
+```console
+sudo systemctl restart apache2
+```
+
+Escribo en el navegador: localhost:8082
+
+// añadir imagen
+
+
+
 ### Creo el docker
 
 creo una carpeta llamada docker en el escritorio
