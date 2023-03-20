@@ -9,6 +9,15 @@ sudo -i
 sudo apt-get update && sudo apt-get install -y apache2
 ```
 
+Busco el archivo donde modificar el puerto:
+```console
+sudo -i
+cd /etc/apache2
+vim ports.conf
+```
+
+Cambio Listen 80 por 8082.
+
 ### Creo el docker
 
 creo una carpeta llamada docker en el escritorio
