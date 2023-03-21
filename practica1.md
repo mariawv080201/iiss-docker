@@ -26,8 +26,8 @@ Construyo el docker:
 docker build -t mi_apache
 ```
 
-```console
 Lo ejecuto:
+```console
 docker run -p 80:80 mi_apache
 ```
 
