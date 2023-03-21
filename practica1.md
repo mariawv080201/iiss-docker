@@ -1,113 +1,3 @@
-## Comandos usados
-
-Tengo que buscar el index.html y meterle mi hola
-lo del puerto que es RUN sed -i 's/Listen 80/Listen 8082/' /etc/apache2/ports.conf hacerlo yo a mano
-
-Instalo apache2:
-```console
-sudo -i
-sudo apt-get update && sudo apt-get install -y apache2
-```
-
-Busco el archivo donde modificar el puerto:
-```console
-sudo -i
-cd /etc/apache2
-vim ports.conf
-```
-
-Cambio Listen 80 por 8082.
-
-// añadir imagen
-
-Busco el archivo donde modificar el html:
-
-```console
-vim /var/www/html/index.html
-``
-
-Dentro escribo:
-```html
-<h1> Hola Maria Woodruff Vazquez! </h1>
-```
-
-// añadir imagen
-
-Reinicio el servidor:
-```console
-sudo systemctl restart apache2
-```
-
-Escribo en el navegador: localhost:8082
-
-// añadir imagen
-
-
-
-### Creo el docker
-
-creo una carpeta llamada docker en el escritorio
-
-
-
-
-### Modifico el puerto: 
-
-detengo el docker:
-```console
-docker stop nombre_del_contenedor
-```
-
-
-## Añado un mensaje:
-
-dentro escribo sin espacios:
-```html
-<h1> Hola Maria Woodruff Vazquez! </h1>
-```
-
-creo la imagen:
-
-```console
-docker build -t apacheserver_p1 .
-docker run -d -p 8082:80 --name apacheserver_p1 apacheserver_p1
-```
-
-pruebo: http://localhost:8082
-
-
-## Lo subo a Docker Hub
-
-compruebo que he iniciado sesión:
-```console
-sudo docker login
-```
-
-```console
-sudo docker apacheserver_p1 mariawv0802/apacheserver_p1:latest
-sudo docker push mariawv0802/apacheserver_p1:latest
-```
-
-
-# Enlace a mi docker:
-
-https://hub.docker.com/repository/docker/mariawv0802/apacheserver_p1/general
-
-
-
-# Comandos usados
-
-Edito mi imagen
-```console
-sudo docker run -t -i mariawv0802/apacheserver_p1 /bin/bash
-```
-
-Instalo vim para poder editar los ficheros:
-```console
-apt-get update
-apt-get install vim
-``
-
 # Práctica 1 Docker
 
 ## Primero creo el docker:
@@ -143,7 +33,75 @@ docker run -p 80:80 mi_apache
 
 Compruebo que funciona en: http://localhost
 
+## Lo subo a Docker Hub
+
+compruebo que he iniciado sesión:
+```console
+sudo docker login
+```
+
+```console
+sudo docker apacheserver_p1 mariawv0802/apacheserver_p1:latest
+sudo docker push mariawv0802/apacheserver_p1:latest
+```
+
 ## Cambio el puerto
 
-Ejecuto el docker con 
+Ejecuto el docker usando la terminal de dentro:
+
+```console
+sudo docker run -t -i mariawv0802/apacheserver_p1 /bin/bash
+```
+
+Instalo vim para poder editar los ficheros:
+```console
+apt-get update
+apt-get install vim
+```
+
+Busco el archivo donde modificar el puerto:
+```console
+sudo -i
+cd /etc/apache2
+vim ports.conf
+```
+
+Cambio Listen 80 por 8082.
+
+// añadir imagen
+
+## Cambio el html
+
+Busco el archivo donde modificar el html:
+
+```console
+vim /var/www/html/index.html
+``
+
+Dentro escribo:
+```html
+<h1> Hola Maria Woodruff Vazquez! </h1>
+```
+
+// añadir imagen
+
+Escribo en el navegador: localhost:8082
+
+// añadir imagen
+
+## Subo a DockerHub la nueva versión
+
+```console
+docker tag apacheserver_p1:v3 mariawv0802/apacheserver_p1
+docker push mariawv0802/apacheserver_p1:v3
+``
+
+Lo ejecuto:
+```console
+docker run mariawv0802/apacheserver_p1:v3
+
+# Enlace a mi docker:
+
+https://hub.docker.com/repository/docker/mariawv0802/apacheserver_p1/general
+
 
