@@ -92,7 +92,7 @@ Escribo en el navegador: localhost:8082
 ```console
 docker tag apacheserver_p1:v3 mariawv0802/apacheserver_p1
 docker push mariawv0802/apacheserver_p1:v3
-``
+```
 
 Lo ejecuto:
 ```console
