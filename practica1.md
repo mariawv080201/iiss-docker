@@ -48,34 +48,7 @@ Escribo en el navegador: localhost:8082
 
 creo una carpeta llamada docker en el escritorio
 
-creo un archivo Dockerfile:
-```console
-touch Dockerfile
-```
 
-escribo dentro con:
-```console
-vim Dockerfile
-```
-
-```console
-FROM ubuntu:latest
-RUN apt-get update && apt-get install -y apache2
-EXPOSE 80
-CMD ["apachectl", "-D", "FOREGROUND"]
-```
-
-construyo el docker:
-```console
-docker build -t mi_apache
-```
-
-```console
-lo ejecuto:
-docker run -p 80:80 mi_apache
-```
-
-compruebo que funciona en: http://localhost
 
 
 ### Modifico el puerto: 
@@ -85,24 +58,8 @@ detengo el docker:
 docker stop nombre_del_contenedor
 ```
 
-edito el archivo Dockerfile:
-
-```console
-FROM ubuntu:latest
-RUN apt-get update && \ apt-get install -y apache2 && \ apt-get clean && \
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
-RUN sed -i 's/Listen 80/Listen 8082/' /etc/apache2/ports.conf
-EXPOSE 8082
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-```
-
 
 ## Añado un mensaje:
-
-creo un archivo index.htm:
-```console
-touch index.html
-```
 
 dentro escribo sin espacios:
 ```html
@@ -150,4 +107,43 @@ Instalo vim para poder editar los ficheros:
 apt-get update
 apt-get install vim
 ``
+
+# Práctica 1 Docker
+
+## Primero creo el docker:
+Creo una carpeta llamada docker en el escritorio.
+
+Creo un archivo Dockerfile:
+```console
+touch Dockerfile
+```
+
+Escribo dentro con:
+```console
+vim Dockerfile
+```
+
+Escribo dentro:
+```console
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y apache2
+EXPOSE 80
+CMD ["apachectl", "-D", "FOREGROUND"]
+```
+
+Construyo el docker:
+```console
+docker build -t mi_apache
+```
+
+```console
+Lo ejecuto:
+docker run -p 80:80 mi_apache
+```
+
+Compruebo que funciona en: http://localhost
+
+## Cambio el puerto
+
+Ejecuto el docker con 
 
