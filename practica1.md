@@ -23,12 +23,12 @@ CMD ["apachectl", "-D", "FOREGROUND"]
 
 Construyo el docker:
 ```console
-docker build -t mi_apache
+docker build -t apacheserver_p1
 ```
 
 Lo ejecuto:
 ```console
-docker run -p 80:80 mi_apache
+docker run -p 80:80 apacheserver_p1
 ```
 
 Compruebo que funciona en: http://localhost
