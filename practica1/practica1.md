@@ -97,6 +97,7 @@ docker push mariawv0802/apacheserver_p1:v3
 Lo ejecuto:
 ```console
 docker run mariawv0802/apacheserver_p1:v3
+```
 
 # Enlace a mi docker:
 
