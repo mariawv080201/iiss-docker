@@ -99,7 +99,10 @@ Lo ejecuto:
 sudo docker run -d -p 8082 mariawv0802/apacheserver_p1
 ```
 
-Con el comando docker ps veo en qué puerto se ejecuta dentro de mi máquina local, por ejemplo 49404. Abro el localhost: http://localhost:49404/
+Con el comando docker ps veo en qué puerto se ejecuta dentro de mi máquina local, por ejemplo 49404. Se ve en el apartado PORTS.
+```console
+0.0.0.0:49404->8082/tcp
+```Abro el localhost: http://localhost:49404/
 
 
 
