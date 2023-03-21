@@ -47,3 +47,28 @@ docker run -d --name nginx2 -p 81:80 -v /ruta/a/mi/volumen:/usr/share/nginx/html
 Este comando ejecuta un segundo contenedor de Nginx llamado "nginx2" a partir de la misma imagen "nginx", publica el puerto 80 del contenedor en el puerto 81 del host, y también monta el volumen "volumenDocker" en el directorio "/usr/share/nginx/html" del contenedor.
 Comprobar que se puede acceder a los contenidos personalizados de ambos contenedores navegando a localhost:80 y localhost:81 en el navegador web.
 Con estos pasos, deberías haber creado dos contenedores de Nginx que utilizan el mismo volumen compartido y pueden servir contenido personalizado desde un archivo index.html personalizado.
+
+
+
+# AHORA BIEN
+
+Para crear un volumen compartido en Docker y usarlo en varios contenedores, puede seguir los siguientes pasos:
+
+Cree un volumen con el siguiente comando:
+lua
+Copy code
+docker volume create volumenDocker
+Cree un contenedor de Nginx y monte el volumen en la ruta /usr/share/nginx/html con el siguiente comando:
+javascript
+Copy code
+docker run -d -p 80:80 --name nginx -v volumenDocker:/usr/share/nginx/html nginx
+Modifique el contenido del archivo index.html en la ruta /var/lib/docker/volumes/volumenDocker/_data/index.html en su máquina host, o use el siguiente comando para copiar un archivo personalizado al contenedor:
+javascript
+Copy code
+docker cp index.html nginx:/usr/share/nginx/html/index.html
+Cree un segundo contenedor y monte el mismo volumen en la ruta /usr/share/nginx/html con el siguiente comando:
+javascript
+Copy code
+docker run -d -p 81:80 --name nginx2 -v volumenDocker:/usr/share/nginx/html nginx
+Acceda a localhost:80 para ver el contenido del primer contenedor y localhost:81 para ver el contenido del segundo contenedor. Verá el saludo personalizado en lugar del texto por defecto.
+Recuerde que si desea modificar el contenido del archivo index.html después de iniciar los contenedores, deberá hacerlo en la ruta /var/lib/docker/volumes/volumenDocker/_data/index.html en su máquina host o usando el comando docker cp.
