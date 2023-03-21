@@ -68,7 +68,7 @@ vim ports.conf
 
 Cambio Listen 80 por 8082.
 
-// añadir imagen
+![w:640](puerto.png)
 
 ## Cambio el html
 
@@ -83,11 +83,9 @@ Dentro escribo:
 <h1> Hola Maria Woodruff Vazquez! </h1>
 ```
 
-// añadir imagen
+![w:640](html.png)
 
 Escribo en el navegador: localhost:8082
-
-// añadir imagen
 
 ## Subo a DockerHub la nueva versión
 
