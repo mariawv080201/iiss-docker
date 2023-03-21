@@ -96,8 +96,12 @@ docker push mariawv0802/apacheserver_p1:v3
 
 Lo ejecuto:
 ```console
-docker run mariawv0802/apacheserver_p1:v3
+sudo docker run -d -p 8082 mariawv0802/apacheserver_p1
 ```
+
+Con el comando docker ps veo en qué puerto se ejecuta dentro de mi máquina local, por ejemplo 49404. Abro el localhost: http://localhost:49404/
+
+
 
 # Enlace a mi docker:
 
