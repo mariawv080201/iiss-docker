@@ -1,7 +1,6 @@
 # Práctica 1 Docker
 
 ## Primero creo el docker:
-Creo una carpeta llamada docker en el escritorio.
 
 Creo un archivo Dockerfile:
 ```console
@@ -15,55 +14,35 @@ vim Dockerfile
 
 Escribo dentro:
 ```console
-FROM ubuntu:latest
-RUN apt-get update && apt-get install -y apache2
-EXPOSE 80
-CMD ["apachectl", "-D", "FOREGROUND"]
+FROM httpd:latest
+RUN apt-get update
+EXPOSE 82
+CMD ["apache2ctl", "-D", "FOREGROUND"]
 ```
 
 Construyo el docker:
 ```console
-docker build -t apacheserver_p1
+docker build -t apacheserver_p1 . 
 ```
 
 Lo ejecuto:
 ```console
-docker run -p 80:80 apacheserver_p1
+docker run -t -i apacheserver_p1 /bin/bash
 ```
 
-Compruebo que funciona en: http://localhost
-
-## Lo subo a Docker Hub
-
-compruebo que he iniciado sesión:
+Instalo vim:
 ```console
-sudo docker login
-```
-
-```console
-sudo docker apacheserver_p1 mariawv0802/apacheserver_p1:latest
-sudo docker push mariawv0802/apacheserver_p1:latest
+apt-get install vim
 ```
 
 ## Cambio el puerto
 
 Ejecuto el docker usando la terminal de dentro:
 
-```console
-sudo docker run -t -i mariawv0802/apacheserver_p1 /bin/bash
-```
-
-Instalo vim para poder editar los ficheros:
-```console
-apt-get update
-apt-get install vim
-```
-
 Busco el archivo donde modificar el puerto:
 ```console
-sudo -i
-cd /etc/apache2
-vim ports.conf
+cd ./conf
+vim httpd.conf
 ```
 
 Cambio Listen 80 por 8082.
@@ -75,7 +54,8 @@ Cambio Listen 80 por 8082.
 Busco el archivo donde modificar el html:
 
 ```console
-vim /var/www/html/index.html
+cd ./htdocs
+vim index.html
 ```
 
 Dentro escribo:
@@ -87,11 +67,18 @@ Dentro escribo:
 
 Escribo en el navegador: localhost:8082
 
-## Subo a DockerHub la nueva versión
+## Lo subo a Docker Hub
 
+Compruebo que he iniciado sesión:
 ```console
-docker tag apacheserver_p1:v3 mariawv0802/apacheserver_p1
-docker push mariawv0802/apacheserver_p1:v3
+sudo docker login
+```
+Lo subo:
+```console
+docker stop [id de la imagen vista con docker images]
+docker commit aa1805c6d798 mariawv0802/apacheserver_p1:latest  
+docker login
+docker push mariawv0802/apacheserver_p1:latest 
 ```
 
 Lo ejecuto:
