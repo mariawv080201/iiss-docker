@@ -81,20 +81,7 @@ docker login
 docker push mariawv0802/apacheserver_p1:latest 
 ```
 
-Lo ejecuto:
-```console
-sudo docker run -d -p 8082 mariawv0802/apacheserver_p1
-```
-
-Con el comando docker ps veo en qué puerto se ejecuta dentro de mi máquina local, por ejemplo 49404. Se ve en el apartado PORTS.
-```console
-0.0.0.0:49404->8082/tcp
-```
-Abro el localhost: http://localhost:49404/
-
-
 
 # Enlace a mi docker:
 
-https://hub.docker.com/repository/docker/mariawv0802/apacheserver_p1/general
-
+https://hub.docker.com/layers/mariawv0802/apacheserver_p1/latest/images/sha256-3650c3f8372a5d4e9f430b584cec983828a0b81d1776a795f53a961f4c819b0e?context=repo
