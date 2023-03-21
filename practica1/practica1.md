@@ -76,7 +76,7 @@ Busco el archivo donde modificar el html:
 
 ```console
 vim /var/www/html/index.html
-``
+```
 
 Dentro escribo:
 ```html
