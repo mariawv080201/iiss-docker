@@ -26,3 +26,29 @@ apt-get install vim
 vim index.html
 ```
 // foto
+
+```bash
+exit
+```
+
++ Creo el otro contenedor nginx2
+```bash
+docker run -d -p 81:80 -v volumenDocker:/usr/share/nginx/html --name nginx2 nginx
+```
+
++ Repito los pasos para acceder a index.html
+```bash
+docker exec -it nginx2 /bin/bash 
+cd /usr/share/nginx/html
+apt-get update
+apt-get install vim
+vim index.html
+```
+
++ Ahora en index.html me sale el mensaje personalizado de nginx1 porque lo he creado a partir de él. Lo modifico y salgo con exit.
+
+// foto
+
+
+
+
