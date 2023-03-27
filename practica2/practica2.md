@@ -50,5 +50,26 @@ vim index.html
 // foto
 
 
+# Subo los contenedores a dockerHub
+
+```bash
+docker commit nginx1 mariawv0802/nginx1
+docker commit nginx2 mariawv0802/nginx2
+
+docker tag mariawv0802/nginx1 mariawv0802/nginx1:v1.0
+docker tag mariawv0802/nginx2 mariawv0802/nginx2:v1.0
+
+docker push mariawv0802/nginx1:v1.0
+docker push mariawv0802/nginx2:v1.0
+```
+
+En mi dockerHub están subidas las imágenes: https://hub.docker.com
+
+// foto
+
+Foto del volumen:
+
+// foto
+
 
 
