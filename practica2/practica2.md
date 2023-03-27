@@ -1,15 +1,15 @@
 
-+ Creo el volumen volumenDocker
+Creo el volumen volumenDocker
 ```bash
 docker volume create volumenDocker
 ```
 
-+ Libero el puerto 80, porque si no no me deja construir el contenedor
+Libero el puerto 80, porque si no no me deja construir el contenedor
 ```bash
 sudo kill -9 $(sudo lsof -t -i :80)
 ```
 
-+ Creo el contenedor nginx1
+Creo el contenedor nginx1
 ```bash
 docker run -d -p 80:80 -v volumenDocker:/usr/share/nginx/html --name nginx1 nginx
 ```
@@ -24,10 +24,12 @@ apt-get install vim
 vim index.html
 ```
 
-+ Inicialmente veo:
+Inicialmente veo:
+
 ![w:640](img/index_html_nginx.png)
 
-+ Modifico index.html para crear un mensaje personalizado
+Modifico index.html para crear un mensaje personalizado
+
 ![w:640](img/index_html_nginx1.png)
 
 
@@ -35,12 +37,12 @@ vim index.html
 exit
 ```
 
-+ Creo el otro contenedor nginx2
+Creo el otro contenedor nginx2
 ```bash
 docker run -d -p 81:80 -v volumenDocker:/usr/share/nginx/html --name nginx2 nginx
 ```
 
-+ Repito los pasos para acceder a index.html
+Repito los pasos para acceder a index.html
 ```bash
 docker exec -it nginx2 /bin/bash 
 cd /usr/share/nginx/html
@@ -78,6 +80,7 @@ En mi dockerHub están subidas las imágenes: https://hub.docker.com
 Foto del volumen:
 
 ![w:640](img/volumenDocker.png)
+
 ![w:640](img/volumenDocker_info.png)
 
 
