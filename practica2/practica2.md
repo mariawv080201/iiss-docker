@@ -55,7 +55,7 @@ Ahora en index.html me sale el mensaje personalizado de nginx1 porque lo he crea
 
 ![w:640](img/index_html_nginx2.png)
 
-Compruebo localhost:81
+Compruebo:
 
 ![w:640](img/saludo.png)
 
