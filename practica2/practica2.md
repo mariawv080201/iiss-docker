@@ -51,11 +51,11 @@ apt-get install vim
 vim index.html
 ```
 
-+ Ahora en index.html me sale el mensaje personalizado de nginx1 porque lo he creado a partir de él. Lo modifico y salgo con exit.
+Ahora en index.html me sale el mensaje personalizado de nginx1 porque lo he creado a partir de él. Lo modifico y salgo con exit.
 
 ![w:640](img/index_html_nginx2.png)
 
-+ Compruebo localhost:81
+Compruebo localhost:81
 
 ![w:640](img/saludo.png)
 
