@@ -54,7 +54,7 @@ docker-compose up -d
 
 Compruebo en http://localhost:82
 
-Me daba un error porque al entrar en localhost:82 aparecía: Error establishing a database connection. Lo solucioné entrando en la base de datos viendo con docker-compose ps que se llamaba docker-wordpress-mariadb-db-1. Ejecuté docker exec -it docker-wordpress-mariadb-db-1 mysql -u root -p e introduje la contraseña de docker-compose.yml que es example. Vi las bases de datos con show databases, y como no aparecía la base de datos wordpress, la añadí con create database wordpress y ya funcionaba en localhost:82.
+Me daba un error porque al entrar en localhost:82 aparecía: Error establishing a database connection. Lo solucioné entrando en la base de datos. Tuve que ver con docker-compose ps que la base de datos se llamaba docker-wordpress-mariadb-db-1 para poder ejecutar docker exec -it docker-wordpress-mariadb-db-1 mysql -u root -p. Introduje la contraseña de docker-compose.yml que es example. Vi las bases de datos con show databases, y como no aparecía la base de datos wordpress, la añadí con create database wordpress y ya funcionaba en localhost:82.
 ```console
 docker-compose ps
 docker exec -it docker-wordpress-mariadb-db-1 mysql -u root -p
