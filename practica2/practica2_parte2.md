@@ -29,9 +29,29 @@ Abro otra terminal y creo el contenedor Ubuntu2
 docker run -it --name Ubuntu2 ubuntu
 ```
 
-Instalo el comando ping en Ubuntu1 y Ubuntu2:
-docker exec -it Ubuntu1 apt-get update && apt-get install -y iputils-ping
-docker exec -it Ubuntu2 apt-get update && apt-get install -y iputils-ping
+Instalo el comando ping en Ubuntu1 y Ubuntu2. Dentro del root de cada máquina escribo:
+```console
+apt-get update && apt-get install -y iputils-ping
+```
 
 Hago ping de Ubuntu1 a Ubuntu2 estando sólo Ubuntu1 conectada a redDocker.
-docker exec -it Ubuntu2 ping Ubuntu1
+```console
+docker exec -it Ubuntu1 ping Ubuntu2
+```
+
+// foto
+
+Dice que no reconoce el nombre porque no están conectados a la misma red.
+
+Conecto Ubuntu2 a la red redDocker.
+docker network connect redDocker Ubuntu2
+
+// foto
+
+Ahora se realiza el ping ya que están conectados a la misma red. Hago control+C y termino su ejecución.
+
+// foto
+
+
+
+
