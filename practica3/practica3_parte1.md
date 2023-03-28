@@ -34,7 +34,7 @@ Compruebo en http://localhost:81
 
 ![w:640](img/localhost_Drupal.png)
 
-## Parte 1
+## Parte 2
 
 Prear un fichero docker-compose.yml con dos servicios: wordpress + mariadb, primero creo un directorio llamado docker-wordpress-mariadb. Entro en el directorio y creo un archivo docker-compose.yml. Lo edito con vim.
 
