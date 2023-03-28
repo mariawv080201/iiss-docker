@@ -34,4 +34,32 @@ Compruebo en http://localhost:81
 
 ![w:640](img/localhost_Drupal.png)
 
-# Parte 2
+## Parte 1
+
+Prear un fichero docker-compose.yml con dos servicios: wordpress + mariadb, primero creo un directorio llamado docker-wordpress-mariadb. Entro en el directorio y creo un archivo docker-compose.yml. Lo edito con vim.
+
+```console
+mkdir docker-wordpress-mariadb
+cd docker-wordpress-mariadb
+touch docker-compose.yml
+vim docker-compose.yml
+```
+
+En este archivo de docker-compose.yml, he definido dos servicios, uno para wordpress y otro para mariadb.He especificado que los contenedores usen la red redDocker. Para hacer que el servicio de wordpress use el puerto 82, hemos especificado la opción "ports" y mapeado el puerto 80 del contenedor al puerto 2  del host.
+
+![w:640](img/docker_compose_yml.png)
+
+Ejecuto los contenedores
+
+```console
+docker-compose up -d
+```
+
+![w:640](img/docker_compose_start.png)
+
+![w:640](img/docker_compose_end.png)
+
+Compruebo en http://localhost:82
+
+![w:640](img/localhost_Drupal.png)
+
