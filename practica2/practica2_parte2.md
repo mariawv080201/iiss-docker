@@ -41,7 +41,7 @@ docker exec -it Ubuntu1 ping Ubuntu2
 
 ![w:640](img/ping_failed.png)
 
-Dice que no reconoce el nombre porque no están conectados a la misma red.
+Ha fallado porque no están conectados a la misma red. El mensaje de error dice que no reconoce el nombre porque no están conectados a la misma red.
 
 Conecto Ubuntu2 a la red redDocker.
 ```console
