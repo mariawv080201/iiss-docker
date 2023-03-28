@@ -52,6 +52,19 @@ Ahora se realiza el ping ya que están conectados a la misma red. Hago control+C
 
 // foto
 
+## Subir a DockerHub
 
+Subo Ubuntu1 y Ubuntu2 a DockerHub
 
+```console
+docker commit Ubuntu1 mariawv0802/ubuntu1:latest
+docker push mariawv0802/ubuntu1:latest
+
+docker commit Ubuntu2 mariawv0802/ubuntu2:latest
+docker push mariawv0802/ubuntu2:latest
+```
+
+En mi DockerHub ahora aparecen ubuntu1 y ubuntu2:
+https://hub.docker.com/repository/docker/mariawv0802/ubuntu1/general
+https://hub.docker.com/repository/docker/mariawv0802/ubuntu2/general
 
