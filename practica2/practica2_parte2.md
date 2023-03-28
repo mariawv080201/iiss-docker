@@ -41,7 +41,7 @@ docker exec -it Ubuntu1 ping Ubuntu2
 
 ![w:640](img/ping_failed.png)
 
-Ha fallado porque no están conectados a la misma red. El mensaje de error dice que no reconoce el nombre porque no están conectados a la misma red.
+Ha fallado porque no están conectados a la misma red. El ping no puede funcionar entre dispositivos que no están en la misma red porque funciona a través del protocolo ICMP (Internet Control Message Protocol), que se utiliza para enviar paquetes de datos a través de la red para verificar la conectividad entre dispositivos. Si no están en la misma red, no pueden comunicarse directamente entre sí, ya que los routers o gateways en la red los separan en diferentes segmentos de red. El mensaje de error dice que no reconoce el nombre porque no están conectados a la misma red.
 
 Conecto Ubuntu2 a la red redDocker.
 ```console
