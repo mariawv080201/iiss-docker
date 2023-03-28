@@ -17,6 +17,7 @@ el nombre de la base de datos, el nombre de usuario y la contraseña.
 
 ![w:640](img/docker_compose_yml.png)
 
+Ejecuto los contenedores
 
 ```console
 docker-compose up -d
