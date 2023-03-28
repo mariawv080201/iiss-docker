@@ -1,3 +1,6 @@
+# Práctica 3
+
+## Parte 1
 
 Prear un fichero docker-compose.yml con dos servicios: drupal + mysql, primero creo un directorio llamado docker-drupal-mysql. Entro en el directorio
 y creo un archivo docker-compose.yml. Lo edito con vim.
@@ -30,3 +33,5 @@ docker-compose up -d
 Compruebo en http://localhost:81
 
 ![w:640](img/localhost_Drupal.png)
+
+# Parte 2
