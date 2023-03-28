@@ -44,7 +44,9 @@ docker exec -it Ubuntu1 ping Ubuntu2
 Dice que no reconoce el nombre porque no están conectados a la misma red.
 
 Conecto Ubuntu2 a la red redDocker.
+```console
 docker network connect redDocker Ubuntu2
+```
 
 ![w:640](img/ping_start.png)
 
