@@ -50,7 +50,7 @@ docker network connect redDocker Ubuntu2
 
 ![w:640](img/ping_start.png)
 
-Ahora se realiza el ping ya que están conectados a la misma red. Hago control+C y termino su ejecución.
+Ahora se realiza el ping ya que están conectados a la misma red. Hago control+C y termino su ejecución. Podemos ver las estadísticas del ping que hemos realizado: se han enviado y recibido 389 paquetes, y se han perdido el 0% de los paquetes. El tiempo de ejecución han sido 389199ms.
 
 ![w:640](img/ping_end.png)
 
