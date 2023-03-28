@@ -39,18 +39,18 @@ Hago ping de Ubuntu1 a Ubuntu2 estando sólo Ubuntu1 conectada a redDocker.
 docker exec -it Ubuntu1 ping Ubuntu2
 ```
 
-// foto
+![w:640](img/ping_failed.png)
 
 Dice que no reconoce el nombre porque no están conectados a la misma red.
 
 Conecto Ubuntu2 a la red redDocker.
 docker network connect redDocker Ubuntu2
 
-// foto
+![w:640](img/ping_start.png)
 
 Ahora se realiza el ping ya que están conectados a la misma red. Hago control+C y termino su ejecución.
 
-// foto
+![w:640](img/ping_end.png)
 
 ## Subir a DockerHub
 
