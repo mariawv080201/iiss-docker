@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    networks:
+      - redDocker
+      
+  wordpress:
+    image: wordpress
+    ports:
+      - "82:80"
+    restart: always
+    networks:
+      - redDocker
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_PORT: 3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_NAME: wordpress
+networks:
+  redDocker:
+
